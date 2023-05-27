@@ -6,6 +6,10 @@
     --transparent-white: hsla(0, 0%, 100%, 0.75);
 }
 
+body {
+    background: var(--light-gray);
+}
+
 * {
     margin: 0;
     font-family: 'Lexend Deca', sans-serif;
