@@ -1,0 +1,113 @@
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --light-gray: hsl(0, 0%, 95%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    color: var(--light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+}
+
+p {
+    color: var(--transparent-white);
+    font-size: 15px;
+    line-height: 1.6em;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 64px 20px;
+}
+
+.preview-card {
+    width: 920px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.preview-segment {
+    padding: 44px 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.preview-segment.orange {
+    background: var(--bright-orange);
+}
+
+.preview-segment.cyan {
+    background: var(--dark-cyan);
+}
+
+.preview-segment.dark-cyan {
+    background: var(--very-dark-cyan);
+}
+
+.preview-segment-top {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+a.btn-learn-more {
+    display: inline-block;
+    background: var(--light-gray);
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 32px;
+    border: 2px solid var(--light-gray);
+}
+
+a.btn-learn-more:hover {
+    background-color: transparent;
+    color: var(--light-gray);
+}
+
+.orange .btn-learn-more {
+    color: var(--bright-orange);
+}
+
+.cyan .btn-learn-more {
+    color: var(--dark-cyan);
+}
+
+.dark-cyan .btn-learn-more {
+    color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        min-height: auto;
+    }
+
+    .preview-card {
+        width: auto;
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .preview-segment {
+        gap: 30px;
+    }
+}
